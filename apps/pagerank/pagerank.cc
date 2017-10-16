@@ -64,10 +64,10 @@ void* do_work(void* args)
    double P_d = arg->P;
 
    //Allocate work among threads
-   double start_d = (tid_d) * (N_real/P_d);
-   double stop_d = (tid_d+1.0) * (N_real/P_d);
-   int i_start = start_d;// tid     * N / (arg->P);
-   int i_stop  = stop_d;// (tid+1) * N / (arg->P);
+   //double start_d = (tid_d) * (N_real/P_d);
+   //double stop_d = (tid_d+1.0) * (N_real/P_d);
+   int i_start = (double)tid     * (double)N/(double)P;  //start_d;// tid     * N / (arg->P);
+   int i_stop  = (double)(tid+1) * (double)N/(double)P;  //stop_d;// (tid+1) * N / (arg->P);
 
    //Pagerank iteration count
    int iterations = 1;
