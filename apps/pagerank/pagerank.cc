@@ -288,11 +288,11 @@ int main(int argc, char** argv)
                exit (EXIT_FAILURE);
             }
 
-            inter = test[number1]; 
+            inter = test[number0]; 
 
             W[number0][inter] = 0; //drand48();
-            W_index[number1][inter] = number0;
-            test[number1]++;
+            W_index[number0][inter] = number1;
+            test[number0]++;
             outlinks[number0]++;
             exist[number0]=1; exist[number1]=1;
             test2[number0]=1;
